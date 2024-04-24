@@ -1,11 +1,5 @@
 
-# Logistic Regression and Data Imbalance Notes
-
-## Logistic Regression
-- **Purpose**: Used for binary classification.
-- **Equation**:
-$𝑝̂ = 1/(1 + e^-(β_0 + β_1x_1 + ... + β_nx_n))$
-
+# Data Imbalance
 
 ## Data Imbalance
 - **Issue**: Occurs when classes in the target variable are unequally represented.
