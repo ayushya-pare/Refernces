@@ -8,6 +8,6 @@
       |                |              |             |
     One predictor   Multiple         Binary       Multi-class
       |                |              |             |
-     Linear       Multiple            Logistic     Use other
-    Regression   Regression                       classification
-                                                    methods
+     Linear       Multiple         Logistic     classification models
+    Regression   Regression       Regression                
+                                                    
