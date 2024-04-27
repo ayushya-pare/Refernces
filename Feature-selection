@@ -8,29 +8,25 @@ Is the feature relevant?
 Is the feature numeric?
   |---> Yes -------------------> Check correlation with target
   |                                          |
-  |                                      Is the feature correlated with the target?
+  |                                      Is the feature at all correlated with the target?
   |                                          |---> No ----------->  Remove or combining features
   |      
   |
   V
 Is the feature categorical?
-  |---> Yes -------------------> Convert using OneHotEncoder or LabelEncoder
+  |---> Yes -------------------> Convert using OneHotEncoder
   |
   V
 Does the feature have missing values?
   |---> Yes -------------------> Impute missing values or remove feature
   |
   V
-Does the feature have a linear relationship with the target?
-  |---> No -------------------> Transform feature (e.g., log, square) or remove
-  |
-  V
 Is the feature correlated to other features?
-  |---> No -------------------> Check for multicollinearity
+  |---> No -------------------> Check for crosscorrelation
   |                                         |
   |                                         V
-  |                                Is there multicollinearity?
-  |                                         |---> Yes -------------------> Remove or combine features
+  |                                 high crosscorrelation?
+  |                                         |---> Yes -------------------> combine features
   |
   V
 Is the dataset still large after feature removal?
