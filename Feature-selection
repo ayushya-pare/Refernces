@@ -1,0 +1,40 @@
+Start
+  |
+  V
+Is the feature relevant?
+  |---> No  -------------------> Remove Feature
+  |
+  V
+Is the feature numeric?
+  |---> Yes -------------------> Check correlation with target
+  |
+  V
+Is the feature categorical?
+  |---> Yes -------------------> Convert using OneHotEncoder or LabelEncoder
+  |
+  V
+Does the feature have missing values?
+  |---> Yes -------------------> Impute missing values or remove feature
+  |
+  V
+Is the feature highly correlated with the target?
+  |---> No -------------------> Consider removing or combining features
+  |
+  V
+Does the feature have a linear relationship with the target?
+  |---> No -------------------> Transform feature (e.g., log, square) or remove
+  |
+  V
+Is the feature independent of other features?
+  |---> No -------------------> Check for multicollinearity
+  |
+  V
+Is there multicollinearity?
+  |---> Yes -------------------> Remove or combine features
+  |
+  V
+Is the dataset still large after feature removal?
+  |---> No -------------------> Consider data collection or feature engineering
+  |
+  V
+End
