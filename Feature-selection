@@ -7,6 +7,10 @@ Is the feature relevant?
   V
 Is the feature numeric?
   |---> Yes -------------------> Check correlation with target
+  |                                          |
+  |                                      Is the feature correlated with the target?
+  |                                          |---> No ----------->  Remove or combining features
+  |      
   |
   V
 Is the feature categorical?
@@ -17,24 +21,19 @@ Does the feature have missing values?
   |---> Yes -------------------> Impute missing values or remove feature
   |
   V
-Is the feature highly correlated with the target?
-  |---> No -------------------> Consider removing or combining features
-  |
-  V
 Does the feature have a linear relationship with the target?
   |---> No -------------------> Transform feature (e.g., log, square) or remove
   |
   V
-Is the feature independent of other features?
+Is the feature correlated to other features?
   |---> No -------------------> Check for multicollinearity
-  |
-  V
-Is there multicollinearity?
-  |---> Yes -------------------> Remove or combine features
+  |                                         |
+  |                                         V
+  |                                Is there multicollinearity?
+  |                                         |---> Yes -------------------> Remove or combine features
   |
   V
 Is the dataset still large after feature removal?
-  |---> No -------------------> Consider data collection or feature engineering
-  |
+  |---> Yes -------------------> :(
   V
-End
+ End
