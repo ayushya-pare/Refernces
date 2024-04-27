@@ -7,14 +7,22 @@ Is the feature relevant?
   V
 Is the feature numeric?
   |---> Yes -------------------> Check correlation with target
-  |                                          |
-  |                                      Is the feature at all correlated with the target?
-  |                                          |---> No ----------->  Remove or combining features
-  |      
+  |                                |--------|--------|
+  |                                |                 |
+  |                             high(>.6)          low(<.1)        
+  |                                |                   |
+  |                          Remove feature    remove or combine feature
   |
   V
 Is the feature categorical?
   |---> Yes -------------------> Convert using OneHotEncoder
+  |                                         |
+  |                             Check correlation with target
+  |                                |--------|--------|
+  |                                |                 |
+  |                             high(>.6)          low(<.1)        
+  |                                |                   |
+  |                          Remove feature    remove or combine feature
   |
   V
 Does the feature have missing values?
